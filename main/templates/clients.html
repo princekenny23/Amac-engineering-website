@@ -1,0 +1,182 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <title>About AMAC-ENGINEERING</title>
+
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name=author content="Themefisher">
+  <meta name=generator content="Themefisher Constra HTML Template v1.0">
+
+  <!-- Favicon
+================================================== -->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+  <!-- CSS
+================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+  <!-- Animation -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %}">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .clients-logo img {
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+    }
+
+    .clients-logo:hover img {
+      transform: scale(1.15);
+      z-index: 2;
+    }
+
+    .clients-logo-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding-top: 30px;
+    }
+
+    .client-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .client-card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .client-card img {
+      max-width: 100px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .client-card:hover img {
+      transform: scale(1.50);
+    }
+  </style>
+
+</head>
+<body>
+  
+<!-- Header start -->
+<header>
+  {% include 'partials/header.html' %}
+
+</header>
+<!--/ Header end -->
+
+<div id="banner-area" class="banner-area" style="background-image:url({% static 'images/banner/banner1.jpg' %})" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+  <div class="banner-text">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="banner-heading" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                <h1 class="banner-title">Our Clients</h1>
+                <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                    <ol class="breadcrumb justify-content-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Company</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Our Clients</li>
+                    </ol>
+                </nav>
+              </div>
+          </div><!-- Col end -->
+        </div><!-- Row end -->
+    </div><!-- Container end -->
+  </div><!-- Banner text end -->
+</div><!-- Banner area end -->
+
+<section id="happy-clients" class="happy-clients text-center" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+  <div class="container">
+    <h3 class="column-title" style="font-size: 24px; margin-bottom: 20px;">Happy Clients</h3>
+    <p class="subtitle">We are proud to have worked with these amazing clients.</p>
+    <div class="clients-logo-wrapper">
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client1.png' %}" alt="Client 1 Logo" />
+        </a>
+      </div>
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client2.png' %}" alt="Client 2 Logo" />
+        </a>
+      </div>
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client3.png' %}" alt="Client 3 Logo" />
+        </a>
+      </div>
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client4.png' %}" alt="Client 4 Logo" />
+        </a>
+      </div>
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client5.png' %}" alt="Client 5 Logo" />
+        </a>
+      </div>
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client6.png' %}" alt="Client 6 Logo" />
+        </a>
+      </div>
+      <div class="client-card" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="800">
+        <a href="#!">
+          <img loading="lazy" class="img-fluid" src="{% static 'images/clients/client7.png' %}" alt="Client 7 Logo" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer >
+    {% include 'partials/footer.html' %}
+
+    </footer>
+
+<!-- Javascript Files -->
+<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}" defer></script>
+<script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+<script src="{% static 'plugins/slick/slick-animation.min.js' %}"></script>
+<script src="{% static 'plugins/colorbox/jquery.colorbox.js' %}"></script>
+<script src="{% static 'plugins/shuffle/shuffle.min.js' %}" defer></script>
+<script src="{% static 'plugins/google-map/map.js' %}" defer></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

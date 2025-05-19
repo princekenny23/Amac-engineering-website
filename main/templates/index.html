@@ -1,0 +1,275 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <title>AMAC-ENGINEERING</title>
+
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name=author content="Themefisher">
+  <meta name=generator content="Themefisher Constra HTML Template v1.0">
+
+  <!-- Favicon
+================================================== -->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+  <!-- CSS
+================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+  <!-- Animation -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %}">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+
+    /* --- Add this to make the homepage banner/slider fill the viewport and prevent scrolling --- */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.banner-carousel,
+.banner-carousel .banner-carousel-item,
+.banner-carousel .slider-content {
+  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+    /* Transparent dropdown background */
+    .dropdown-menu {
+      background: rgba(0,0,0,0.5) !important;
+      border: none !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      color: #fff;
+    }
+    .dropdown-menu .dropdown-item,
+    .dropdown-menu li > a {
+      color: #fff !important;
+    }
+    .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu li > a:hover {
+      background: rgba(0,128,0,0.2) !important; /* green highlight on hover */
+      color: #28a745 !important; /* changed to green */
+    }
+    /* Project submenu as grid/square style */
+    .dropdown-submenu .dropdown-menu {
+      background: rgba(0,0,0,0.5) !important;
+      min-width: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 10px 0;
+    }
+    .dropdown-submenu .dropdown-menu li {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .dropdown-submenu .dropdown-menu li a {
+      width: 80%;
+      padding: 8px 18px;
+      border-radius: 0;
+      color: #fff !important;
+      white-space: normal;
+      font-size: 15px;
+      background: transparent !important;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.2s, color 0.2s;
+    }
+    .dropdown-submenu .dropdown-menu li a:hover {
+      background: rgba(0,128,0,0.2) !important;
+      color: #28a745 !important; /* changed to green */
+    }
+    /* Remove last border */
+    .dropdown-submenu .dropdown-menu li:last-child a {
+      border-bottom: none;
+    }
+
+    /* Social Media Floating Links */
+    .social-float {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+    .social-float a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: rgba(0,0,0,0.7);
+      color: #28a745 !important; /* Green icons */
+      border-radius: 50%;
+      font-size: 22px;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .social-float a:hover {
+      background: #28a745;
+      color: #fff !important;
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+  
+<header>
+  {% include 'partials/header.html' %}
+
+</header>
+<!--/ Header end -->
+
+<div class="banner-carousel banner-carousel-1 mb-0" style="position: relative;">
+  <!-- Banner Item 1 -->
+  <div class="banner-carousel-item" style='background-image: url({% static "images/slider-main/bg3.jpg" %})'>
+    <div class="slider-content" style="position: relative;">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-md-12 text-center">
+            <h3 class="slide-sub-title" data-animation-in="slideInRight">Welcome to AMAC Engineering Limited</h3>
+            <h2 class="slide-title" data-animation-in="slideInLeft">Delivering Innovative and Reliable Engineering Solutions</h2>
+            <p data-animation-in="slideInLeft" data-duration-in="1.2">
+              <a href="{% url 'contact'  %}" class="slider btn btn-primary border">INQUIRIES</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Social Media Floating Links for Banner 1 -->
+      <div class="social-float">
+        <a href="https://facebook.com/amacengineeringmw" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/265994089527" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:info@amacengineeringmw.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Item 2 -->
+  <div class="banner-carousel-item" style="background-image: url({% static 'images/slider-main/bg1.jpg' %})">
+    <div class="slider-content" style="position: relative;">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-md-12 text-center text-white">
+            <h2 class="slide-title mb-3" data-animation-in="slideInDown">The Industries We Serve</h2>
+            <p class="lead subtitle mb-5" data-animation-in="fadeIn" style="color: white">We specialize in a variety of industries to meet your needs.</p>
+            <div class="row justify-content-center text-white" data-animation-in="fadeInUp" data-duration-in="1.5">
+              <div class="col-md-10">
+                <div class="row g-4">
+                  <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <i class="fas fa-bolt fa-2x mb-2 text-success"></i>
+                    <p class="mb-0">Energy</p>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <i class="fas fa-tint fa-2x mb-2 text-success"></i>
+                    <p class="mb-0">Water</p>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <i class="fas fa-gem fa-2x mb-2 text-success"></i>
+                    <p class="mb-0">Mining</p>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <i class="fas fa-hard-hat fa-2x mb-2 text-success"></i>
+                    <p class="mb-0">Construction</p>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <i class="fas fa-wind fa-2x mb-2 text-success"></i>
+                    <p class="mb-0">HVAC</p>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <i class="fas fa-project-diagram fa-2x mb-2 text-success"></i>
+                    <p class="mb-0">Piping Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4" data-animation-in="slideInLeft">
+              <a href="{% url 'contact' %}" class="slider btn btn-primary" aria-label="contact-with-us">INQUIRIES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Social Media Floating Links for Banner 2 -->
+      <div class="social-float">
+        <a href="https://facebook.com/amacengineeringmw" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/265994089527" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:info@amacengineeringmw.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Item 3 -->
+  <div class="banner-carousel-item" style="background-image: url({% static 'images/slider-main/bg2.jpg' %})">
+    <div class="slider-content text-left" style="position: relative;">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-md-12">
+            <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+            <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+            <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
+            <p data-animation-in="slideInRight">
+              <a href="{% url 'services'  %}" class="slider btn btn-primary border">INQUIRIES</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Social Media Floating Links for Banner 3 -->
+      <div class="social-float">
+        <a href="https://facebook.com/amacengineeringmw" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/265994089527" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:info@amacengineeringmw.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- Javascript Files
+  ================================================== -->
+
+  <!-- JavaScript Files -->
+  <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}" defer></script>
+  <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+  <script src="{% static 'plugins/slick/slick-animation.min.js' %}"></script>
+  <script src="{% static 'plugins/colorbox/jquery.colorbox.js' %}"></script>
+  <script src="{% static 'plugins/shuffle/shuffle.min.js' %}" defer></script>
+  <script src="{% static 'plugins/google-map/map.js' %}" defer></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  </div><!-- Body inner end -->
+  </body>
+
+  </html>

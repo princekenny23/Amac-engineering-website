@@ -1,0 +1,234 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <title>Contact AMAC-ENGINEERING</title>
+
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name=author content="Themefisher">
+  <meta name=generator content="Themefisher Constra HTML Template v1.0">
+
+  <!-- Favicon
+================================================== -->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+  <!-- CSS
+================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+  <!-- Animation -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %}">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Add AOS Animation CSS in the <head> section -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  
+<header>
+  {% include 'partials/header.html' %}
+
+</header>
+<div id="banner-area" class="banner-area" style="background-image:url({% static 'images/banner/banner1.jpg' %})" data-aos="fade-up" data-aos-duration="1000">
+  <div class="banner-text">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="banner-heading" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <h1 class="banner-title">Contact</h1>
+                <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <ol class="breadcrumb justify-content-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Company</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    </ol>
+                </nav>
+              </div>
+          </div><!-- Col end -->
+        </div><!-- Row end -->
+    </div><!-- Container end -->
+  </div><!-- Banner text end -->
+</div><!-- Banner area end --> 
+
+<section id="main-container" class="main-container" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container">
+
+    <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-12">
+        <h2 class="section-title">Reaching our Office</h2>
+        <h3 class="section-sub-title">Find Our Location</h3>
+      </div>
+    </div>
+    <!--/ Title row end -->
+
+    <!-- Contact Form First -->
+    <div class="row" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-12">
+        <h3 class="column-title">We love to hear</h3>
+        <form id="contact-form" action="#" method="post" role="form">
+          <div class="error-container"></div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Name</label>
+                <input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Email</label>
+                <input class="form-control form-control-email" name="email" id="email" placeholder="" type="email" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Subject</label>
+                <input class="form-control form-control-subject" name="subject" id="subject" placeholder="" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-control form-control-message" name="message" id="message" placeholder="" rows="10" required></textarea>
+          </div>
+          <div class="text-right"><br>
+            <button class="btn btn-primary solid blank" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- Contact form row end -->
+
+   <!--    Map  --> 
+
+    <!-- Addresses Last -->
+    <style>
+      /* Reduce grid size and add zoom-in effect on hover */
+      .address-grid .col-md-4 {
+        flex: 0 0 30%;
+        max-width: 25%;
+        margin: 0 1.66%;
+        padding: 0;
+      }
+      @media (max-width: 991px) {
+        .address-grid .col-md-4 {
+          flex: 0 0 100%;
+          max-width: 80%;
+          margin: 10px 0;
+        }
+      }
+      .ts-service-box-bg {
+        transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        border-radius: 12px;
+       
+      }
+      .ts-service-box-bg:hover {
+        transform: scale(1.07);
+        box-shadow: 0 8px 24px rgba(40,167,69,0.15);
+        z-index: 2;
+      }
+    </style>
+
+    <div class="row address-grid justify-content-center" data-aos="fade-up" data-aos-delay="400">
+      <div class="col-md-4 mb-3">
+        <div class="ts-service-box-bg text-center h-100">
+          <span class="ts-service-icon icon-round">
+            <i class="fas fa-map-marker-alt mr-0"></i>
+          </span>
+          <div class="ts-service-box-content">
+            <h4>Visit Our Office</h4>
+            <p>AQUARIUS HOUSE, 
+              Second Floor, Room No. 9
+              Haile Selassie Road, 
+              Blantyre</p>
+          </div>
+        </div>
+      </div><!-- Col 1 end -->
+
+      <div class="col-md-4 mb-3">
+        <div class="ts-service-box-bg text-center h-100">
+          <span class="ts-service-icon icon-round">
+            <i class="fa fa-envelope mr-0"></i>
+          </span>
+          <div class="ts-service-box-content">
+            <h4>Email Us</h4>
+            <p>info@amacengineeringmw.com </p>
+            <p>amacengineering@yahoo.com</p>
+          </div>
+        </div>
+      </div><!-- Col 2 end -->
+
+      <div class="col-md-4 mb-3">
+        <div class="ts-service-box-bg text-center h-100">
+          <span class="ts-service-icon icon-round">
+            <i class="fa fa-phone-square mr-0"></i>
+          </span>
+          <div class="ts-service-box-content">
+            <h4>Call Us</h4>
+            <p>+265 212 089 527  </p>
+            <p>+265 994 089 527</p>
+          </div>
+        </div>
+      </div><!-- Col 3 end -->
+    </div><!-- Address row end -->
+
+  </div><!-- Container end -->
+</section><!-- Main container end -->
+
+<footer >
+    {% include 'partials/footer.html' %}
+
+    </footer>
+
+
+
+
+  <!-- Javascript Files
+  ================================================== -->
+
+  <!-- JavaScript Files -->
+  <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}" defer></script>
+  <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+  <script src="{% static 'plugins/slick/slick-animation.min.js' %}"></script>
+  <script src="{% static 'plugins/colorbox/jquery.colorbox.js' %}"></script>
+  <script src="{% static 'plugins/shuffle/shuffle.min.js' %}" defer></script>
+  <script src="{% static 'plugins/google-map/map.js' %}" defer></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  </div><!-- Body inner end -->
+
+  
+  <!-- Google Map API Key-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+  <!-- Google Map Plugin-->
+  <script src="plugins/google-map/map.js" defer></script>
+
+  <!-- Template custom -->
+  <script src="js/script.js"></script>
+  <!-- Add AOS JS before closing </body> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </div><!-- Body inner end -->
+  </body>
+
+  </html>
