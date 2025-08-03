@@ -28,7 +28,7 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
   <!-- Animation -->
-  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- slick Carousel -->
   <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
   <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
@@ -36,6 +36,14 @@
   <link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %}">
   <!-- Template styles-->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts: Lato for headings, Lora for body -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <style>
 
     /* --- Add this to make the homepage banner/slider fill the viewport and prevent scrolling --- */
@@ -122,7 +130,7 @@ body, html {
       width: 30px;
       height: 30px;
       background: rgba(0,0,0,0.7);
-      color: #28a745 !important; /* Green icons */
+      color: white !important; /* Green icons */
       border-radius: 50%;
       font-size: 22px;
       transition: background 0.2s, color 0.2s;
@@ -133,7 +141,36 @@ body, html {
       color: #fff !important;
     }
 
+    /* Apply Lora to body and paragraphs */
+    body, p {
+      font-family: 'Lora', serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased !important;
+      line-height: 26px;
+      font-size: 15px;
+    }
 
+    /* Apply Lato to headings and key banner text */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .slide-title,
+    .slide-sub-title,
+    .slide-title-box,
+    .section-title,
+    .section-sub-title,
+    .title,
+    .column-title,
+    .column-title-small,
+    .banner-title {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased !important;
+    }
 
   </style>
 
@@ -152,11 +189,12 @@ body, html {
     <div class="slider-content" style="position: relative;">
       <div class="container h-100">
         <div class="row align-items-center h-100">
-          <div class="col-md-12 text-center">
-            <h3 class="slide-sub-title" data-animation-in="slideInRight">Welcome to AMAC Engineering Limited</h3>
-            <h2 class="slide-title" data-animation-in="slideInLeft">Delivering Innovative and Reliable Engineering Solutions</h2>
-            <p data-animation-in="slideInLeft" data-duration-in="1.2">
-              <a href="{% url 'contact'  %}" class="slider btn btn-primary border">INQUIRIES</a>
+          <div class="col-md-12 text-center banner-info"
+               data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+            <h3 class="slide-sub-title">Welcome to AMAC Engineering Limited</h3>
+            <h2 class="slide-title">Delivering Innovative and Reliable Engineering Solutions</h2>
+            <p>
+              <a href="{% url 'message'  %}" class="slider btn btn-primary border">INQUIRIES</a>
             </p>
           </div>
         </div>
@@ -176,10 +214,11 @@ body, html {
     <div class="slider-content" style="position: relative;">
       <div class="container h-100">
         <div class="row align-items-center h-100">
-          <div class="col-md-12 text-center text-white">
-            <h2 class="slide-title mb-3" data-animation-in="slideInDown">The Industries We Serve</h2>
-            <p class="lead subtitle mb-5" data-animation-in="fadeIn" style="color: white">We specialize in a variety of industries to meet your needs.</p>
-            <div class="row justify-content-center text-white" data-animation-in="fadeInUp" data-duration-in="1.5">
+          <div class="col-md-12 text-center text-white"
+               data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+            <h2 class="slide-title mb-3">The Industries We Serve</h2>
+            <p class="lead subtitle mb-5" style="color: white">We specialize in a variety of industries to meet your needs.</p>
+            <div class="row justify-content-center text-white">
               <div class="col-md-10">
                 <div class="row g-4">
                   <div class="col-6 col-md-4 col-lg-2 text-center">
@@ -209,8 +248,8 @@ body, html {
                 </div>
               </div>
             </div>
-            <div class="mt-4" data-animation-in="slideInLeft">
-              <a href="{% url 'contact' %}" class="slider btn btn-primary" aria-label="contact-with-us">INQUIRIES</a>
+            <div class="mt-4">
+              <a href="{% url 'message'  %}" class="slider btn btn-primary border">INQUIRIES</a>
             </div>
           </div>
         </div>
@@ -230,18 +269,39 @@ body, html {
     <div class="slider-content text-left" style="position: relative;">
       <div class="container h-100">
         <div class="row align-items-center h-100">
-          <div class="col-md-12">
-            <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
-            <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
-            <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
-            <p data-animation-in="slideInRight">
-              <a href="{% url 'services'  %}" class="slider btn btn-primary border">INQUIRIES</a>
-            </p>
+          <div class="col-md-12"
+               data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+            <h2 class="slide-title-box mb-4 text-white text-center">Our Mission &amp; Vision</h2>
+            <div class="row">
+              <div class="col-md-6 mb-3 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+                <div class="p-3 h-100 d-flex flex-column justify-content-center align-items-start" style="background: rgba(0,0,0,0.35); border-radius: 0.5rem;">
+                  <h4 class="text-success mb-2" style="font-weight: 700;">
+                    <i class="fas fa-bullseye"></i> Mission
+                  </h4>
+                  <p class="mb-0 text-white" style="font-size: 1.05rem;">
+                    To provide engineering solutions to companies and organizations needed for smooth running their day-to-day activities to successfully achieve their goals and meet their business objectives.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
+                <div class="p-3 h-100 d-flex flex-column justify-content-center align-items-start" style="background: rgba(0,0,0,0.35); border-radius: 0.5rem;">
+                  <h4 class="text-success mb-2" style="font-weight: 700;">
+                    <i class="fas fa-eye"></i> Vision
+                  </h4>
+                  <p class="mb-0 text-white" style="font-size: 1.05rem;">
+                    To become the best engineering solution provider in Africa.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 text-center" data-aos="zoom-in" data-aos-delay="400">
+              <a href="{% url 'message'  %}" class="slider btn btn-primary border">INQUIRIES</a>
+            </div>
           </div>
         </div>
       </div>
       <!-- Social Media Floating Links for Banner 3 -->
-      <div class="social-float">
+      <div class="social-float" data-aos="fade-up" data-aos-delay="500">
         <a href="https://facebook.com/amacengineeringmw" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -269,6 +329,59 @@ body, html {
   <script src="{% static 'plugins/shuffle/shuffle.min.js' %}" defer></script>
   <script src="{% static 'plugins/google-map/map.js' %}" defer></script>
   <script src="{% static 'js/script.js' %}"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true
+    });
+  </script>
+  <!-- Add Swiper JS CDN before this script if not already present -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // Initialize Swiper
+  var swiper = new Swiper('.banner-carousel', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    speed: 900,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChangeTransitionStart: function () {
+        // Remove animation from all
+        document.querySelectorAll('.banner-info').forEach(function(el){
+          el.classList.remove('animate__animated', 'animate__fadeInDown');
+        });
+      },
+      slideChangeTransitionEnd: function () {
+        // Add animation to the active slide
+        var activeSlide = document.querySelector('.swiper-slide-active .banner-info');
+        if(activeSlide){
+          activeSlide.classList.add('animate__animated', 'animate__fadeInDown');
+        }
+      }
+    }
+  });
+
+  // Initial animation on first load
+  document.addEventListener('DOMContentLoaded', function(){
+    var activeSlide = document.querySelector('.swiper-slide-active .banner-info');
+    if(activeSlide){
+      activeSlide.classList.add('animate__animated', 'animate__fadeInDown');
+    }
+  });
+</script>
   </div><!-- Body inner end -->
   </body>
 

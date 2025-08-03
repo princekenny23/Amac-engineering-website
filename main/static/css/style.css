@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 /* Typography
 ================================================== */
 body {
@@ -8,7 +10,7 @@ body {
 
 body,
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Lora', serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
   line-height: 26px;
@@ -20,10 +22,17 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: #212121;
+h6,
+.slide-title,
+.slide-sub-title,
+.section-title,
+.section-sub-title,
+.title,
+.column-title,
+.column-title-small,
+.banner-title {
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -69,6 +78,8 @@ h5 {
   margin-bottom: 10px;
   font-style: italic;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  
 }
 
 /* Global styles
@@ -1178,6 +1189,54 @@ ul.navbar-nav > li > a {
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   position: relative;
   content: no-close-quote;
+}
+
+/* Custom style for "Get a Quote" button */
+.call-to-action-btn .btn.btn-primary {
+  background: #fff !important;
+  color: #111 !important;
+  border: 2px solid #008000 !important;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.call-to-action-btn .btn.btn-primary:hover,
+.call-to-action-btn .btn.btn-primary:focus {
+  background: #008000 !important;
+  color: #fff !important;
+  border: 2px solid #008000 !important;
+}
+
+/* Custom style for "View Project" button */
+.project-link .btn.btn-primary {
+  background: #fff !important;
+  color: #111 !important;
+  border: 2px solid #008000 !important;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.project-link .btn.btn-primary:hover,
+.project-link .btn.btn-primary:focus {
+  background: #008000 !important;
+  color: #fff !important;
+  border: 2px solid #008000 !important;
+}
+
+/* Custom style for "View All Projects" button */
+.general-btn .btn.btn-primary {
+  background: #fff !important;
+  color: #111 !important;
+  border: 2px solid #008000 !important;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.general-btn .btn.btn-primary:hover,
+.general-btn .btn.btn-primary:focus {
+  background: #008000 !important;
+  color: #fff !important;
+  border: 2px solid #008000 !important;
 }
 
 /* Table of Content
@@ -3067,7 +3126,7 @@ label {
 }
 
 .comments-list .comment-date {
-  color: #959595;
+   color: #959595;
   margin-bottom:     5px;
   font-size: 12px;
 }
@@ -3401,3 +3460,23 @@ ul.navbar-nav > li.active > a {
   color: #05270d !important;
   background: transparent !important;
 }
+
+/* Make all buttons have rounded corners */
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+  border-radius: 30px !important;
+}
+
+/* Optionally, make sure special button classes are also rounded */
+.btn-primary,
+.btn-dark,
+.btn-white,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info {
+  border-radius: 30px !important;
+}
+

@@ -9,7 +9,7 @@ urlpatterns = [
     path('clients/', views.clients, name='clients'),
     path('values/', views.values, name='values'),
     path('licenses/', views.licenses, name='licenses'),
-    path('about2/', views.about2, name='about2'),
+ 
 
     # Projects URLs
     path('projects/', views.projects, name='projects'),
@@ -27,4 +27,7 @@ urlpatterns = [
     path('services/mechanical-services/', views.mechanical_services, name='mechanical-services'),
     path('services/engineering-consultancy/', views.engineering_services, name='engineering-services'),
     path('services/agriculture-engineering/', views.agriculture_engineering_services, name='agriculture-engineering-services'),
+
+    # Message URL
+    path('message/', views.message, name='message'),
 ]

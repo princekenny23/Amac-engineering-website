@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
+from .forms import ContactForm
+from django.shortcuts import render, redirect
+
+
 
 def index(request):
     return render(request, 'index.html')
@@ -6,15 +12,33 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 
-def about2(request):
-    return render(request, 'about2.html')  # Render the about2.html template
+
 
 def team(request):
     return render(request, 'team.html')
 
-def contact(request):
-    return render(request, 'contact.html')
 
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            # Format WhatsApp message
+            full_message = f"New Contact Request from AMAC Website:\n\nName: {name}\nEmail: {email}\nSubject: {subject}\nMessage: {message}"
+            phone_number = '265997575865'  # Replace with your WhatsApp number
+            encoded_message = full_message.replace(' ', '%20').replace('\n', '%0A')
+            whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
+            
+            return redirect(whatsapp_url)
+    else:
+        form = ContactForm()
+    
+    return render(request, 'contact.html', {'form': form})
 def clients(request):
     return render(request, 'clients.html')
 
@@ -64,4 +88,16 @@ def engineering_services(request):
 
 def agriculture_engineering_services(request):
     return render(request, 'services/agriculture_engineering_services.html')
+
+def message(request):
+    success = False
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # You can process the form here (send email, save, etc.)
+            success = True
+            form = ContactForm()  # Reset form after success
+    else:
+        form = ContactForm()
+    return render(request, 'message.html', {'form': form, 'success': success})
 
